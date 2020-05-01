@@ -1,0 +1,36 @@
+using System;
+
+namespace Show
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double y, i = 8;
+            Console.WriteLine("  Введите значения коэфициентов");
+            Console.Write("a = ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("b = ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("c = ");
+            int c = Convert.ToInt32(Console.ReadLine());
+            Console.Write("d = ");
+            int d = Convert.ToInt32(Console.ReadLine());
+            for (int x = 5; x < 15; x++)
+            {
+                if (x < 10)
+                {
+                    y = Math.Tan(x / i + a) - Math.Log10(b * i + 7);
+                    Console.WriteLine("<10");
+                }
+                else
+                {
+                    y = c * Math.Pow(Math.Pow(x, 2) + d * Math.Pow(i, 1.2), 1 / i);
+                    Console.WriteLine(">=10");
+                }
+                Console.WriteLine("y[" + x + "] = " + Math.Round(y, 2));
+            }
+
+        }
+    }
+}

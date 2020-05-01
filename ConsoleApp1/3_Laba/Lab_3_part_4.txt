@@ -1,0 +1,69 @@
+﻿using System;
+
+namespace Show
+{
+    class Program
+    {
+      static void PrintArray(string a, int[,] mas)
+        {
+            Console.WriteLine(a);
+         for (int i = 0; i < mas.GetLength(0); i++)
+            {
+                for (int j = 0; j < mas.GetLength(1); j++)
+                    Console.Write("{0} ", mas[i, j]);
+                Console.WriteLine();
+            }
+        }
+        static int Change(int[,] mas)
+        {
+           int sum=0;
+            for (int i = 0; i < mas.GetLength(0); i++)
+                for (int j = 0; j < mas.GetLength(1); j++)
+                    if (mas[i, j] % 2 == 0) sum+=mas[i,j];
+            return sum;
+        }
+        static int[,] InputArray()
+        {
+          Console.WriteLine("Введите размерность двумерного массива");
+          Console.Write("N - ");
+          int n = Convert.ToInt32(Console.ReadLine());
+          Console.Write("M - ");
+          int m = Convert.ToInt32(Console.ReadLine());
+          int[,] mas1 = new int[n,m];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                  {
+                      Console.Write($"A[{i}, {j}] = ");
+                      mas1[i,j]=Convert.ToInt32(Console.ReadLine());
+                  }
+            }
+            //mas=mas1;
+            return mas1;
+        }
+        static void Main()
+        {
+            try
+            {
+              Console.ForegroundColor = ConsoleColor.Cyan;
+
+              int[,] MyArray=InputArray();
+                PrintArray("Начальный массив:", MyArray);
+                int sum=Change(MyArray);
+                Console.WriteLine("Сумма четных елементов массива - "+sum);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("неверний формат ввода даных");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("переповнення");
+            }
+            catch (OutOfMemoryException)
+            {
+                Console.WriteLine("недостатньо пам'яті для створення нового об'єкта");
+            }
+        }
+    }
+}

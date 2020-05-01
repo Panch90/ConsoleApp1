@@ -1,0 +1,89 @@
+using System;
+namespace ConsoleApplication
+{
+    class Class
+    {
+        static int[] Input()
+        {
+            Console.WriteLine("введiть розмiрнiсть масиву ");
+            int n = int.Parse(Console.ReadLine());
+            int[] a = new int[n];
+            for (int i = 0; i < n; ++i)
+            {
+                Console.Write("a[{0}]= ", i);
+                a[i] = int.Parse(Console.ReadLine());
+            }
+            return a;
+        }
+        static int Max(int[] a)
+        {
+            int max = a[0];
+            for (int i = 1; i < a.Length; ++i)
+                if (a[i] > max) max = a[i];
+            return max;
+        }
+        static int Min(int[] a)
+        {
+            int max = a[0];
+            for (int i = 1; i < a.Length; ++i)
+                if (a[i] < max) max = a[i];
+            return max;
+        }
+        
+        static int MinPoz(int[] a)
+        {
+            int max = a[0];
+            for (int i = 1; i < a.Length; ++i)
+            {
+                if(a[i]>0)
+                if (a[i] < max) max = a[i];
+            }
+            return max;
+        }
+
+        static int Kof(int[] a)
+        {
+            int buf = Max(a);
+            for (int i = 0; i < a.Length; ++i)
+            {
+                if (a[i] == buf)
+                    return i;
+            }
+           return 0;
+        }
+
+        static void Main()
+        {
+            int[] myArray = Input();
+            int max = Max(myArray);
+            int min = Min(myArray);
+            int minPozitiv = MinPoz(myArray);
+            int kol = 0;
+            int sum = 0;
+            int buf1 = 0;
+            int buf2 = 0;
+            for (int i = 0; i < myArray.Length; ++i)
+                if (myArray[i] == max) ++kol;
+
+
+            for(int i = 0; i < myArray.Length; ++i)
+            {
+                if (myArray[i] == min)
+                    buf2 = i;
+            }
+            
+            
+
+            for (int i = Kof(myArray); i <= buf2; ++i)
+            {
+                sum += myArray[i];
+            }
+
+            Console.WriteLine("  Кiлькiсть максимальних елементiв = " + kol);
+            Console.WriteLine("  Мiнiмальний iз позитивних - " + minPozitiv);
+            //Console.WriteLine("  buf1 - " + buf1);
+            //Console.WriteLine("  buf2 - " + buf2);
+            Console.WriteLine("  Сума - " + sum);
+        }
+    }
+}

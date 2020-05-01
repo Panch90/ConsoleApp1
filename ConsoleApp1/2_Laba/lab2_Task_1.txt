@@ -1,0 +1,36 @@
+using System;
+namespace Show
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("  Введите число - ");
+            float bufer = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("  Виберете какую операцию произвести");
+            Console.WriteLine("   1 - возвести в степень\n   2 - достать корень\n   3 - взять процент");
+            float chose = float.Parse(Console.ReadLine());
+
+            switch (chose)
+            {
+                case (1):
+                    Console.Write("  Степень вкоторою вознести число - ");
+                    float buf = float.Parse(Console.ReadLine());
+                    Console.WriteLine("  Результат - " + Math.Pow(bufer, buf));
+                    break;
+                case (2):
+                    Console.WriteLine("  Результат - " + Math.Round(Math.Sqrt(bufer),2));
+                    break;
+                case (3):
+                    Console.Write("  Процент от какого числа  - ");
+                    buf = float.Parse(Console.ReadLine());
+                    float rezalt = (bufer / buf) * 100;
+                    Console.WriteLine("  Результат - " + Math.Round(rezalt,2) + "%");
+                    break;
+
+            }
+
+        }
+    }
+}

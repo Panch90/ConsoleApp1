@@ -1,0 +1,25 @@
+using System;
+namespace Show
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double i = 8, a = 0, b = 1;
+            for (int x = 5; x < i + 8; x++)
+            {
+                a += y(x);
+            }
+            for (int j = 0; j < i + 5; j++)
+            {
+                b *= y(j);
+            }
+            double z = Math.Pow(a,2) + 3 * b;
+            Console.WriteLine("z = " + Math.Round(z, 2));
+        }
+        static double y(int x)
+        {
+            return ((Math.Cos(Math.Pow(x,2)) * Math.Sin(2 * x - 1)) + 4.29);
+        }
+    }
+}

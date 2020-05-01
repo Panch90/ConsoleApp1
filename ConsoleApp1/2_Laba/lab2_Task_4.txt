@@ -1,0 +1,84 @@
+using System;
+
+namespace Show
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int ask = 2;
+            Console.WriteLine("  ¬ведите номер мес€ца - получите врем€ года");
+            Console.WriteLine("  ( от 1 до 12 )");
+            int chose = Int32.Parse(Console.ReadLine());
+            if (chose > 12 || chose < 0)
+            {
+                while (chose > 12 || chose < 0)
+                {
+                    Console.WriteLine("  ¬ведите номер мес€ца ещЄ раз");
+                    Console.WriteLine("  ( от 1 до 12 )");
+                    chose = Int32.Parse(Console.ReadLine());
+                }
+            }
+
+
+            switch (chose)
+            {
+                case (1):
+                    Console.WriteLine("  ¬рем€ года - зима");
+                    break;
+                case (2):
+                    Console.WriteLine("  ¬рем€ года - зима");
+                    break;
+                case (3):
+                    Console.WriteLine("  ¬рем€ года - весна");
+                    break;
+                case (4):
+                    Console.WriteLine("  ¬рем€ года - весна");
+                    break;
+                case (5):
+                    Console.WriteLine("  ¬рем€ года - весна");
+                    break;
+                default:
+                    if (chose == 6)
+                    {
+                        Console.WriteLine("  ¬рем€ года - лето");
+                        break;
+                    }
+                    else if (chose == 7)
+                    {
+                        Console.WriteLine("  ¬рем€ года - лето");
+                        break;
+                    }
+                    else if (chose == 8)
+                    {
+                        Console.WriteLine("  ¬рем€ года - лето");
+                        break;
+                    }
+                    else if (chose == 9)
+                    {
+                        Console.WriteLine("  ¬рем€ года - осень");
+                        break;
+                    }
+                    else if (chose == 10)
+                    {
+                        Console.WriteLine("  ¬рем€ года - осень");
+                        break;
+                    }
+                    else if (chose == 11)
+                    {
+                        Console.WriteLine("  ¬рем€ года - осень");
+                        break;
+                    }
+                    else if (chose == 12)
+                    {
+                        Console.WriteLine("  ¬рем€ года - зима");
+                        break;
+                    }
+                    break;
+            }
+
+
+
+        }
+    }
+}

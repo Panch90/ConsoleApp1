@@ -1,0 +1,128 @@
+﻿using System;
+
+namespace Show
+{
+    class Program
+    {
+        static void Main()
+        {
+            
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+
+
+            Console.Write("Введите количество книг - ");
+            int size = Convert.ToInt32(Console.ReadLine());
+            while (size < 5)
+            {
+                Console.WriteLine("Не мньше 5. Попробуйте еще раз");
+                size = Convert.ToInt32(Console.ReadLine());
+            }
+
+
+            Library[] objectsArray = new Library[size];
+            Console.WriteLine("Введите параметры книг");
+            for (int i = 0; i < size; i++)
+            {
+                objectsArray[i] = new Library();
+                objectsArray[i].GetInformation();
+                Console.WriteLine("");
+            }
+
+
+            Console.WriteLine("Введите код для поиска книги");
+            int find_code = Convert.ToInt32(Console.ReadLine());
+            if (!Library.Find(find_code, objectsArray, size))
+            {
+                Console.WriteLine("Книги с таким кодом не найдено");
+            }
+        }
+    }
+
+    class Library
+    {
+        public Library() { }
+        public Library(string avtor, string title, string janr, int code, int year, int stranichy)
+        {
+            this.avtor = avtor; this.title = title; this.janr = janr;
+            this.code = code; this.year = year; this.stranichy = stranichy;
+        }
+        public void GetInformation()
+        {
+            Console.Write("ФИО автора - ");
+            avtor = Convert.ToString(Console.ReadLine());
+            Console.Write("Название книги - ");
+            title = Convert.ToString(Console.ReadLine());
+            Console.Write("Жанр - ");
+            janr = Convert.ToString(Console.ReadLine());
+            Console.Write("Код в библиотеке - ");
+            code = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Год издания - ");
+            year = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Количество страниц - ");
+            stranichy = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public static bool Comparison(Library obj_1, Library obj_2, int parametr)
+        {
+            switch (parametr)
+            {
+                case 1:
+                    if (obj_1.avtor == obj_2.avtor)
+                        return true;
+                    return false;
+                case 2:
+                    if (obj_1.title == obj_2.title)
+                        return true;
+                    return false;
+                case 3:
+                    if (obj_1.janr == obj_2.janr)
+                        return true;
+                    return false;
+                case 4:
+                    if (obj_1.code == obj_2.code)
+                        return true;
+                    return false;
+                case 5:
+                    if (obj_1.year == obj_2.year)
+                        return true;
+                    return false;
+                case 6:
+                    if (obj_1.stranichy == obj_2.stranichy)
+                        return true;
+                    return false;
+                default:
+                    return false;
+            }
+        }
+        public static bool Find(int code, Library[] obj, int size)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                if (obj[i].code == code)
+                {
+                    obj[i].toString();
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void toString()
+        {
+            Console.WriteLine($"ФИО автора - {avtor}");
+            Console.WriteLine($"Название книги - {title}");
+            Console.WriteLine($"Жанр - {janr}");
+            Console.WriteLine($"Код в библиотеке - {code}");
+            Console.WriteLine($"Год издания - {year}");
+            Console.WriteLine($"Количество страниц - {stranichy}");
+        }
+
+
+        private string avtor;
+        private string title;
+        private string janr;
+        private int year;
+        private int stranichy;
+        private int code;
+    }
+}

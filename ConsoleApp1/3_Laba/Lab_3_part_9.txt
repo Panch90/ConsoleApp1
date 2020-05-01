@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+namespace Show
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int limit = 1000000;
+            int bufer = 0;
+            Console.WriteLine("Введите размерность первого массива:");
+            int size_A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Заполнитк массив А:");
+            int[] array_A = new int[size_A];
+            for (int i = 0; i < size_A; i++)
+            {
+                Console.Write("A[" + i + "] = ");
+                array_A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Введите размерность второго массива:");
+            int size_B = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Заполнитк массив А:");
+            int[] array_B = new int[size_B];
+            for (int i = 0; i < size_B; i++)
+            {
+                Console.Write("B[" + i + "] = ");
+                array_B[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int[] masRezalt = new int[limit];
+
+            HashSet<int> numbers = new HashSet<int>();
+
+            for ( int i = 0; i<size_A; i++)
+            {
+                numbers.Add(array_A[i]);
+            }
+            
+            for ( int i = 0; i<size_B; i++)
+            {
+                numbers.Add(array_B[i]);
+            }
+
+            int[] rezalt = new int[limit];
+            int j = 0;
+            foreach(int i in numbers)
+            {
+                rezalt[j] = i;
+                j++;
+                bufer++;
+            }
+
+
+            Console.WriteLine("Полученный масси:");
+            for (int i = 0; i < bufer; i++)
+            {
+                Console.WriteLine("C[" + i + "] = " + rezalt[i]);
+            }
+        }
+    }
+}

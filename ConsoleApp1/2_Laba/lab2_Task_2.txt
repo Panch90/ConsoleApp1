@@ -1,0 +1,25 @@
+using System;
+
+namespace Show
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("  Введите цену на первый товар - ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("  Введите цену на второй товар - ");
+            double b = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("  На сколько процентов подорожали товары - ");
+            double p = Convert.ToDouble(Console.ReadLine());
+            double p1 = ((p / 100) * a) + a;
+            double p2 = ((p / 100) * b) + b;
+            Console.WriteLine("  Старая цена первого товара - " + a);
+            Console.WriteLine("  Старая цена второго товара - " + b);
+            Console.WriteLine("  Новая цена первого товара - " + p1);
+            Console.WriteLine("  Новая цена второго товара - " + p2);
+            
+        }
+    }
+}

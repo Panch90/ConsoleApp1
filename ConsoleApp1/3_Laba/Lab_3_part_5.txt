@@ -1,0 +1,58 @@
+﻿using System;
+
+namespace Show
+{
+    class Program
+    {
+      static void Main()
+        {
+            try
+            {
+              
+                int[][] MyArray = MakeArray();
+                PrintArray("Созданый массив:", MyArray);
+                
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("невірний формат вводу даних");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("переповнення");
+            }
+            catch (OutOfMemoryException)
+            {
+                Console.WriteLine("недостатньо пам'яті для створення нового об'єкта");
+            }
+        }
+        static void PrintArray(string a, int[][] mas)
+        {
+            Console.WriteLine(a);
+            for (int i = 0; i < mas.Length; i++)
+            {
+                for (int j = 0; j < mas[i].Length; j++) Console.Write("{0} ",
+               mas[i][j]);
+                Console.WriteLine();
+            }
+        }
+        static int[][] MakeArray()
+        {
+          Console.Write("Введите количество рядков: ");
+          int n = int.Parse(Console.ReadLine());
+         int[][] MyArray = new int[n][];
+          for (int i = 0; i < MyArray.Length; i++)
+          {
+              
+              int j = i*2;
+              MyArray[i] = new int[j];
+              for (j = 0; j < MyArray[i].Length; j++)
+              {
+                  Console.WriteLine($"a[{i}][{j}] = {MyArray[i][j] = i+j}");
+              }
+          }
+          return MyArray;
+        }
+
+    }
+}
