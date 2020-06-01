@@ -1,0 +1,11 @@
+C:\Users\Windows\source\repos\КР\КР\bin\Debug\netcoreapp3.1\КР.exe
+C:\Users\Windows\source\repos\КР\КР\bin\Debug\netcoreapp3.1\КР.deps.json
+C:\Users\Windows\source\repos\КР\КР\bin\Debug\netcoreapp3.1\КР.runtimeconfig.json
+C:\Users\Windows\source\repos\КР\КР\bin\Debug\netcoreapp3.1\КР.runtimeconfig.dev.json
+C:\Users\Windows\source\repos\КР\КР\bin\Debug\netcoreapp3.1\КР.dll
+C:\Users\Windows\source\repos\КР\КР\bin\Debug\netcoreapp3.1\КР.pdb
+C:\Users\Windows\source\repos\КР\КР\obj\Debug\netcoreapp3.1\КР.csprojAssemblyReference.cache
+C:\Users\Windows\source\repos\КР\КР\obj\Debug\netcoreapp3.1\КР.AssemblyInfoInputs.cache
+C:\Users\Windows\source\repos\КР\КР\obj\Debug\netcoreapp3.1\КР.AssemblyInfo.cs
+C:\Users\Windows\source\repos\КР\КР\obj\Debug\netcoreapp3.1\КР.dll
+C:\Users\Windows\source\repos\КР\КР\obj\Debug\netcoreapp3.1\КР.pdb

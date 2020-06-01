@@ -1,0 +1,22 @@
+C:\Users\sysho\source\repos\NewProjectCshyr\obj\Debug\netcoreapp3.1\NewProjectCshyr.csprojAssemblyReference.cache
+C:\Users\sysho\source\repos\NewProjectCshyr\obj\Debug\netcoreapp3.1\NewProjectCshyr.AssemblyInfoInputs.cache
+C:\Users\sysho\source\repos\NewProjectCshyr\obj\Debug\netcoreapp3.1\NewProjectCshyr.AssemblyInfo.cs
+C:\Users\sysho\source\repos\NewProjectCshyr\bin\Debug\netcoreapp3.1\NewProjectCshyr.exe
+C:\Users\sysho\source\repos\NewProjectCshyr\bin\Debug\netcoreapp3.1\NewProjectCshyr.deps.json
+C:\Users\sysho\source\repos\NewProjectCshyr\bin\Debug\netcoreapp3.1\NewProjectCshyr.runtimeconfig.json
+C:\Users\sysho\source\repos\NewProjectCshyr\bin\Debug\netcoreapp3.1\NewProjectCshyr.runtimeconfig.dev.json
+C:\Users\sysho\source\repos\NewProjectCshyr\bin\Debug\netcoreapp3.1\NewProjectCshyr.dll
+C:\Users\sysho\source\repos\NewProjectCshyr\bin\Debug\netcoreapp3.1\NewProjectCshyr.pdb
+C:\Users\sysho\source\repos\NewProjectCshyr\obj\Debug\netcoreapp3.1\NewProjectCshyr.dll
+C:\Users\sysho\source\repos\NewProjectCshyr\obj\Debug\netcoreapp3.1\NewProjectCshyr.pdb
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\bin\Debug\netcoreapp3.1\Ylia.exe
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\bin\Debug\netcoreapp3.1\Ylia.deps.json
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\bin\Debug\netcoreapp3.1\Ylia.runtimeconfig.json
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\bin\Debug\netcoreapp3.1\Ylia.runtimeconfig.dev.json
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\bin\Debug\netcoreapp3.1\Ylia.dll
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\bin\Debug\netcoreapp3.1\Ylia.pdb
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\obj\Debug\netcoreapp3.1\Ylia.csprojAssemblyReference.cache
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\obj\Debug\netcoreapp3.1\Ylia.AssemblyInfoInputs.cache
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\obj\Debug\netcoreapp3.1\Ylia.AssemblyInfo.cs
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\obj\Debug\netcoreapp3.1\Ylia.dll
+F:\2 семестр 2 курс\Order\YliaPanch\Ylia\obj\Debug\netcoreapp3.1\Ylia.pdb
